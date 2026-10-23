@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Mark Rysen Torres - 2nd-Year BSIT Student | Aspiring Data & Backend Engineer">
+  <title>Mark Rysen Torres | Backend & Data Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="brand">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span class="brand-name">Mark Rysen Torres</span>
+      </div>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#roadmap">Next Architecture</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero-section">
+      <div class="profile-wrapper">
+        <img src="profile.png" alt="Portrait of Mark Rysen Torres" class="profile-img">
+      </div>
+      <div class="hero-text">
+        <p class="eyebrow">2nd-Year BSIT Student &bull; Aspiring Data &amp; Backend Engineer</p>
+        <h1 class="hero-title">Building structured APIs, relational data services, and automated data pipelines.</h1>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I am a second-year Bachelor of Science in Information Technology (BSIT) student working toward a career in backend software and data engineering. My current work centers on RESTful API design, database state validation, and tabular data processing in Python.
+      </p>
+      <p>
+        I prioritize write-time data integrity using Pydantic, clean route modularity, and predictable data persistence. Currently, I am leveling up from local SQLite workflows into containerized, event-driven architectures utilizing PostgreSQL, Redis, and Docker.
+      </p>
+    </section>
+
+    <section id="skills">
+      <h2>Core Competencies</h2>
+      <div class="skills-grid">
+        <article class="skill-card">
+          <span class="skill-tag">Backend</span>
+          <h3>Python &amp; FastAPI</h3>
+          <p>RESTful endpoint design, route modularity, Pydantic schema validation, and HTTP error handling.</p>
+        </article>
+        <article class="skill-card">
+          <span class="skill-tag">Database</span>
+          <h3>SQLModel &amp; Relational DBs</h3>
+          <p>Relational data modeling, table relationships, stock constraint logic, and SQLite persistence.</p>
+        </article>
+        <article class="skill-card">
+          <span class="skill-tag">Data Processing</span>
+          <h3>Pandas &amp; Tabular Data</h3>
+          <p>Reading and sanitizing CSV/Excel datasets, data filtering, missing-value handling, and structured export.</p>
+        </article>
+        <article class="skill-card">
+          <span class="skill-tag">Tooling &amp; Workflow</span>
+          <h3>Git &amp; Development Tools</h3>
+          <p>Version control with Git/GitHub, virtual environments (venv), and API debugging with Swagger/OpenAPI.</p>
+        </article>
+        <article class="skill-card">
+          <span class="skill-tag">Frontend Basics</span>
+          <h3>Semantic HTML &amp; CSS</h3>
+          <p>Responsive mobile-first layouts, accessible semantic structure, and native CSS custom properties.</p>
+        </article>
+        <article class="skill-card">
+          <span class="skill-tag">Roadmap / Target</span>
+          <h3>PostgreSQL, Docker, Redis</h3>
+          <p>Actively learning containerization, schema migrations with Alembic, and async task queues for backend scaling.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Demonstrated Projects</h2>
+      <div class="project-list">
+        
+        <!-- Cafe Inventory API -->
+        <article class="project-card">
+          <div class="project-header">
+            <h3>Cafe Inventory &amp; Order API</h3>
+            <a href="https://github.com/TorresMarkRysen/cafe-inventory-api" target="_blank" rel="noopener noreferrer" class="external-link">GitHub &nearr;</a>
+          </div>
+          <p class="project-tech">FastAPI &bull; SQLModel &bull; SQLite &bull; Pydantic</p>
+          <p>Developed a RESTful backend service managing cafe menu inventory, stock replenishment, and order transactions. Enforces validation to prevent negative stock debits, calculates order totals, and persists transactional sales logs to SQLite.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Autonoma-Ops Architecture Spec -->
+    <section id="roadmap">
+      <h2>Current Architecture Build</h2>
+      <div class="project-card roadmap-card">
+        <div class="project-header">
+          <h3>Autonoma-Ops: Automated Invoice Reconciliation Engine</h3>
+          <span class="badge badge-wip">In Development</span>
+        </div>
+        <p class="project-tech">FastAPI &bull; Redis/RQ &bull; PostgreSQL &bull; Gemini OCR &bull; Docker &bull; Alembic</p>
+        <p>An event-driven pipeline designed to eliminate manual invoice-to-inventory reconciliation:</p>
+        <ul class="roadmap-list">
+          <li><strong>Document Ingestion:</strong> FastAPI endpoint accepting multi-format vendor uploads (PDF, Excel, images).</li>
+          <li><strong>Async Task Decoupling:</strong> Redis Queue (RQ) worker offloading OCR extraction and line-item reconciliation from the web server thread.</li>
+          <li><strong>Audit &amp; Discrepancy Engine:</strong> Gemini Vision structured JSON outputs compared against internal inventory records, auto-flagging line-item variances over 2%.</li>
+          <li><strong>Production Deployment:</strong> Containerized via Docker Compose with Alembic migrations and GitHub Actions CI/CD test pipelines.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Get in Touch</h2>
+      <p class="section-lead">Feel free to reach out for internship opportunities, project collaboration, or technical discussions.</p>
+      <form action="#" method="POST" onsubmit="event.preventDefault();">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@domain.com" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Brief outline of your inquiry..." required></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2026 Mark Rysen Torres &bull; Built with Semantic HTML &amp; Modern CSS</p>
+  </footer>
+</body>
+</html>
